@@ -1,0 +1,33 @@
+@import 'vendor/basscss/scss/basscss';
+@import 'navigations';
+$font-family: 'Roboto', 'Helvetica Neue', Helvetica, sans-serif !default;
+body {
+  font-size: 14px;
+  font-weight: 300;
+  font-family:'Roboto', 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+header {
+  padding-top: 2em;
+}
+
+a {
+  color: #34495e;
+  -webkit-transition: 300ms;
+  -moz-transition: 300ms;
+  -o-transition: 300ms;
+  transition: 300ms; }
+
+
+.main-content {
+  min-height: 350px;
+}
+
+
+option, input, select {
+  font-weight: lighter !important;
+}
+
+.button {
+  font-weight: 400;
+}

@@ -14,6 +14,7 @@
     "ember-cli-test-loader": "rjackson/ember-cli-test-loader#0.0.2"
   },
   "devDependencies": {
-    "basscss": "*"
+    "basscss": "*",
+    "fontawesome": "~4.1.0"
   }
 }

@@ -1,6 +1,44 @@
-<h2 id='title'>Welcome to Ember.js</h2>
-{{#link-to "users"}}
-  users
-{{/link-to}}
-{{outlet}}
+<header class="blue bg-dark-gray">
+<div class="container">
+  <div class="row">
+    <div class="col col-6">
+      <h1 class="h4 caps">Emberapp</h1>
+      <h2 class="h5 caps ">simple app with own api</h2>
+   </div>
+    <div class="col col-6">
+      <div class="nav mobile-nav-table nav-top">
+        <a href="/">home</a>
 
+        {{#link-to "users"}} users {{/link-to}}
+      </div>
+    </div>
+  </div>
+
+</header>
+
+
+<div class="container px2">
+  {{outlet}}
+</div>
+{{outlet modal}}
+
+{{!-- <div class="container px2">
+  <section class="py3">
+    <blockquote class="px2 py3 m0 center mid-gray">
+      <p class="h2 italic mb0">Welcome to Emberapp</p>
+      <cite>some api testing</cite>
+    </blockquote>
+  </section>
+  --}}
+{{!--   <section class="py3">
+
+    {{#link-to "users"}}
+      users
+    {{/link-to}}
+  </section>
+
+  <section class="py3">
+    {{outlet}}
+  </section> --}}
+
+</div>

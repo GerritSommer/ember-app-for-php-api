@@ -1,4 +1,27 @@
-users route <br>
-{{content.length}}
+<section class="py3">
+    <table class="table-reset table-light border">
+      <thead class="bold bg-light-gray">
+        <tr>
+          <th>id</th>
+          <th>name</th>
+          <th>role</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {{#each user in content}}
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.role}}</td>
+            <td>
+              {{#link-to "user.edit" user}}
+                <i class="fa fa-pencil"></i>
+              {{/link-to}}
+            </td>
+          </tr>
+        {{/each}}
+      </tbody>
+    </table>
 
-{{outlet}}
+</section>

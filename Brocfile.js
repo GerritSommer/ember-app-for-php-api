@@ -4,6 +4,8 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 var app = new EmberApp();
 
+var mergeTrees = require('broccoli-merge-trees');
+var pickFiles = require('broccoli-static-compiler');
 // Use `app.import` to add additional libraries to the generated
 // output files.
 //
@@ -17,4 +19,29 @@ var app = new EmberApp();
 // please specify an object with the list of modules as keys
 // along with the exports of each module as its value.
 
+// var fontawesome = pickFiles('vendor/fontawesome/fonts', {
+//     srcDir: '/',
+//     files: [
+//         'fontawesome-webfont.ttf',
+//         'fontawesome-webfont.woff',
+//         'fontawesome-webfont.eot',
+//         'FontAwesome.otf',
+//         'fontawesome-webfont.svg'
+//     ],
+//     destDir: '/assets/fonts'
+// });
+
+// module.exports = mergeTrees([
+//     app.toTree(),
+//     fontawesome
+// ]);
+
+app.import('vendor/fontawesome/fonts/fontawesome-webfont.ttf', { destDir: 'fonts' });
+app.import('vendor/fontawesome/fonts/FontAwesome.otf', { destDir: 'fonts' });
+app.import('vendor/fontawesome/fonts/fontawesome-webfont.eot', { destDir: 'fonts' });
+app.import('vendor/fontawesome/fonts/fontawesome-webfont.svg', { destDir: 'fonts' });
+app.import('vendor/fontawesome/fonts/fontawesome-webfont.woff', { destDir: 'fonts' });
+
+app.import('vendor/fontawesome/css/font-awesome.min.css');
+app.import('vendor/basscss/basscss.css');
 module.exports = app.toTree();
