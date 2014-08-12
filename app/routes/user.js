@@ -7,5 +7,11 @@ export default Ember.Route.extend({
 
   model: function(params) {
     return this.store.find('user', params.user_id);
+  },
+
+  actions: {
+    saveUser: function(user) {
+      user.save();
+    }
   }
 });

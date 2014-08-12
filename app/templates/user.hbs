@@ -1,5 +1,5 @@
 <section class="py3">
-  <div class="oh mb3 border rounded">
+  <div class="mb3 border rounded">
     <form class="form form-light p2">
       <span>
         ID: #{{content.id}}
@@ -9,7 +9,6 @@
       {{view Ember.Select content=controller.roles}}
     </form>
 
-    <button class="button ml2 bg-green white m2 right">Gray Button</button>
+    <button class="button ml2 bg-green white m2 right" {{action saveUser content}}>save record</button>
   </div>
-
 </section>
