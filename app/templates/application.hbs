@@ -1,20 +1,23 @@
+
+
 <header class="blue bg-dark-gray">
   <div class="container">
     <div class="row">
       <div class="col col-6">
-        test
       </div>
       <div class="col col-6">
         <div class="nav mobile-nav-table nav-top">
           <a href="/">home</a>
-        {{#link-to "users"}} users {{/link-to}}
+          {{#link-to "users"}} users {{/link-to}}
+        </div>
       </div>
     </div>
+  </header>
+
+
+  <div class="container px2">
+    {{outlet}}
   </div>
-</header>
 
 
-<div class="container px2">
-  {{outlet}}
-</div>
 </div>

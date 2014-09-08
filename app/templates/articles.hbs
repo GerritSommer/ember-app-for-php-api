@@ -1,0 +1,27 @@
+<section class="py3">
+
+  <table class="table-reset table-light border">
+    <thead class="bold bg-light-gray">
+      <tr>
+        <th>id</th>
+        <th>title</th>
+        <th>body</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each article in content}}
+      <tr>
+        <td>{{article.id}}</td>
+        <td>{{article.title}}</td>
+        <td>{{article.body}}</td>
+        <td>
+          {{#link-to "article.edit" article}} <i class="fa fa-pencil"></i> {{/link-to}}
+          <i class="fa fa-trash-o ml1" {{action deleteUser article}}></i>
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+
+</section>

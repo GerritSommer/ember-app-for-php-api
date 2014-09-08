@@ -1,0 +1,17 @@
+
+<div class="container mt2">
+  <div class="row">
+     {{multi-select
+         contentBinding="content"
+         prompt="select sth"
+         targetBinding="someCollection"
+         value="content"
+         optionLabelPath="content.name"
+      }}
+ </div>
+ <div class="row">
+  <div class="col col-12">
+    länge: {{someCollection.length}}
+  </div>
+</div>
+</div>

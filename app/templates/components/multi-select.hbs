@@ -1,0 +1,27 @@
+<div class="selected-list">
+  {{#each selected}}
+    <span class="selected-item" {{action removeFromSelected this}}>{{name}} <i class="fa fa-times"></i></span>
+  {{/each}}
+</div>
+
+
+<div class="dropdown">
+
+  <label class="dropdown-button" {{action toggleActive}}>{{prompt}}</label>
+  <label class="dropdown-overlay"></label>
+
+  <span class="dropdown-popup" {{bind-attr class="active"}}>
+    {{#if searchVisible}}
+      {{view Em.TextField
+        valueBinding="keyword"}}
+    {{/if}}
+    {{#each filteredContent}}
+      <div {{action addToSelected this}}>
+        <div class="selectable-item">
+          {{name}}
+        </div>
+      </div>
+    {{/each}}
+  </span>
+
+</div>

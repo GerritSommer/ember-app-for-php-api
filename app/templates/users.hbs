@@ -4,31 +4,35 @@
       create new user
     {{/link-to}}
   </div>
-
-  {{outlet}}
-
-  <table class="table-reset table-light border">
-    <thead class="bold bg-light-gray">
-      <tr>
-        <th>id</th>
-        <th>name</th>
-        <th>role</th>
-        <th></th>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each user in content}}
-      <tr>
-        <td>{{user.id}}</td>
-        <td>{{user.name}}</td>
-        <td>{{user.role}}</td>
-        <td>
-          {{#link-to "user.edit" user}} <i class="fa fa-pencil"></i> {{/link-to}}
-          <i class="fa fa-trash-o ml1" {{action deleteUser user}}></i>
-        </td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col col-8">
+      <table class="table-reset table-light border">
+        <thead class="bold bg-light-gray">
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>role</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each user in content}}
+          <tr>
+            <td>{{user.id}}</td>
+            <td>{{#link-to "user.details" user}}{{user.name}}{{/link-to}}</td>
+            <td>{{user.role}}</td>
+            <td>
+              {{#link-to "user.edit" user}} <i class="fa fa-pencil"></i> {{/link-to}}
+              <i class="fa fa-trash-o ml1" {{action deleteUser user}}></i>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+    <div class="col col-4">
+      {{outlet}}
+    </div>
+  </div>
 
 </section>

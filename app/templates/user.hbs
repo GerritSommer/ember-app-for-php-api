@@ -1,14 +1,1 @@
-<section class="py3">
-  <div class="mb3 border rounded">
-    <form class="form form-light p2">
-      <span>
-        ID: #{{content.id}}
-      </span>
-      <label class="mr1">Name:</label>
-      {{input value=content.name class="field-small input mr1"}}
-      {{view Ember.Select content=controller.roles}}
-    </form>
-
-    <button class="button ml2 bg-green white m2 right" {{action saveUser content}}>save record</button>
-  </div>
-</section>
+{{outlet}}
